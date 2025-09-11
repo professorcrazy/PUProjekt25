@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-    KeyCode pauseKey = KeyCode.Escape;
+    public KeyCode pauseKey = KeyCode.Escape;
     public GameObject pauseMenu;
     bool isPaused = false;
     // Update is called once per frame
@@ -14,7 +14,7 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    void PauseSystem()
+    public void PauseSystem()
     {
         isPaused = !isPaused;
         if (isPaused)
@@ -24,7 +24,6 @@ public class PauseManager : MonoBehaviour
                 pauseMenu.SetActive(true);
             }
             Time.timeScale = 0f;
-            
         }
         else
         {

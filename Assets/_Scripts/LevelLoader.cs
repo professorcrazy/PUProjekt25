@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    public int loadLevelId = 0;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -21,6 +22,6 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        LoadLevelByID(SceneManager.GetActiveScene().buildIndex + 1 % SceneManager.sceneCountInBuildSettings);
+        LoadLevelByID((SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings);
     }
 }
