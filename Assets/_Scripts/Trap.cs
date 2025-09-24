@@ -13,4 +13,14 @@ public class Trap : MonoBehaviour
             }
         }
     }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.collider.CompareTag("Player")) {
+            if (RespawnSystem.instance != null) {
+                RespawnSystem.instance.PlayerDied();
+            }
+            else {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    }
 }

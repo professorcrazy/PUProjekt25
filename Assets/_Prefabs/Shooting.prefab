@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b6237c0f20a3a46ba0ec32263b0997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 158441864502281868, guid: bf18eab6ba0f9e7468c323bd067afd74, type: 3}
   shotSpeed: 10
   shotRPS: 2
   shotLifetime: 3

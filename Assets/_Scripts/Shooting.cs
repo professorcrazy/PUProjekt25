@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKey(shotKey) && (lastShot + 1f/shotRPS <= Time.time))
         {
             lastShot = Time.time;
-            GameObject shot = Instantiate(prefab, transform.position, Quaternion.identity);
+            GameObject shot = Instantiate(prefab, transform.position, transform.rotation);
             if (shot.GetComponent<Rigidbody2D>() != null)
             {
                 shot.GetComponent<Rigidbody2D>().linearVelocity = transform.right * shotSpeed;
